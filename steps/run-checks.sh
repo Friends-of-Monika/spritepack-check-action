@@ -24,7 +24,7 @@ find "$spritepack_path" \
     -path "*/mod_assets" -o \
     -path "*/characters" \) \
     -prune \
-    -exec sh -c 'cd "$(dirname "$0")"; cp -rv "$(basename "$(printf "%s" "$0" | sed "s/game\/mod_assets$/game/")")" "$1"' \{\} "$mas" \;
+    -exec sh -c 'cd "$(dirname "$0")"; cp -r "$(basename "$(printf "%s" "$0" | sed "s/game\/mod_assets$/game/")")" "$1"' \{\} "$mas" \;
 
 "$renpy/renpy.sh" "$mas" compile >/dev/null 2>&1
 
