@@ -1,10 +1,10 @@
-name: "Submod Check"
-description: "Perform a code check and headless MAS run on repository"
+name: "Spritepack Check"
+description: "Perform a spritepack check and headless MAS run on repository"
 
 inputs:
-  submod-path:
+  spritepack-path:
     description: >
-      Path to directory containing submod script files. If not provided, action
+      Path to directory containing spritepack files. If not provided, action
       will detect its location automatically (might be inaccurate.)
 
 runs:
@@ -23,4 +23,4 @@ runs:
       run: |
         "${{ github.action_path }}/steps/run-checks.sh" \
           "${{ github.action_path }}" \
-          "${{ inputs.submod-path }}"
+          "${{ inputs.spritepack-path }}"
