@@ -5,7 +5,7 @@ your submod codebase.
 
 ## Usage
 
-*For complete example see [submod-check-example.](https://github.com/friends-of-monika/submod-check-example)*
+*For complete example see [spritepack-check-example.](https://github.com/friends-of-monika/spritepack-check-example)*
 
 Add this step to your workflow `steps` section (make sure it goes
 *after* `actions/checkout`):
@@ -13,5 +13,5 @@ Add this step to your workflow `steps` section (make sure it goes
 ```yaml
 # ... the rest of your workflow .yml file ...
 - name: "Check"
-  uses: "friends-of-monika/submod-check-action@v2"
+  uses: "friends-of-monika/spritepack-check-action@v2"
 ```
