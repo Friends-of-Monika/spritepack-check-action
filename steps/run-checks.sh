@@ -27,6 +27,6 @@ find "$spritepack_path" \
     -exec sh -c 'cd "$(dirname "$0")"; cp -r "$(basename "$(printf "%s" "$0" | sed "s/game\/mod_assets$/game/")")" "$1"' \{\} "$mas" \;
 
 "$renpy/renpy.sh" "$mas" compile >/dev/null 2>&1
-tail -n +9 "$mas/log/spj.log" | grep '^.*!ERROR! T_T.*$'
+tail -n +9 "$mas/log/spj.log" | grep -E '^.*(!ERROR! T_T.*|Warning! ;_;)$'
 
 if tail -n +9 "$mas/log/spj.log" | grep -Eq '^.*!ERROR! T_T.*$'; then exit 1; fi
