@@ -1,7 +1,7 @@
-# Submod Check Action
+# Spritepack Check Action
 
 Simple composite action for GitHub Actions workflows to perform checks on
-your submod codebase.
+your spritepack code.
 
 ## Usage
 
